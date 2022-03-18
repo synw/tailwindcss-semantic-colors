@@ -12,7 +12,7 @@ const semanticColors = plugin(
               color: `${value.light.txt}`,
             },
             [`.txt-${e(`${key}`)}`]: {
-              color: `${value.light.txt}`,
+              color: `${value.light.bg}`,
             },
             [`.block-${e(`${key}`)}`]: {
               backgroundColor: `${value.light.bg}`,
@@ -23,7 +23,7 @@ const semanticColors = plugin(
                 color: `${value.dark.txt}`,
               },
               [`& .txt-${e(`${key}`)}`]: {
-                color: `${value.dark.txt}`,
+                color: `${value.dark.bg}`,
               },
               [`& .block-${e(`${key}`)}`]: {
                 backgroundColor: `${value.dark.bg}`,
