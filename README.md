@@ -87,7 +87,7 @@ will do the same as:
 will do the same as:
 
 ```html
-<div class="text-white dark:text-neutral-100">Primary text block</div>
+<div class="text-cyan-700 dark:text-cyan-800">Primary text block</div>
 ```
 
 ### Variants
