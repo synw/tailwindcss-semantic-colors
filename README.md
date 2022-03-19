@@ -90,6 +90,18 @@ will do the same as:
 <div class="text-cyan-700 dark:text-cyan-800">Primary text block</div>
 ```
 
+### Border utilities
+
+```html
+<div class="border bord-primary">Block with border</div>
+```
+
+will do the same as:
+
+```html
+<div class="border border-cyan-700 dark:border-cyan-800">Block with border</div>
+```
+
 ### Variants
 
 To apply variants on a color. If we have defined another semantic color:
