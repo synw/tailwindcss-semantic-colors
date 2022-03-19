@@ -17,6 +17,9 @@ const semanticColors = plugin(
             [`.block-${e(`${key}`)}`]: {
               backgroundColor: `${value.light.bg}`,
             },
+            [`.bord-${e(`${key}`)}`]: {
+              borderColor: `${value.light.bg}`,
+            },
             '.dark': {
               [`& .${e(`${key}`)}`]: {
                 backgroundColor: `${value.dark.bg}`,
@@ -27,7 +30,10 @@ const semanticColors = plugin(
               },
               [`& .block-${e(`${key}`)}`]: {
                 backgroundColor: `${value.dark.bg}`,
-              }
+              },
+              [`& .bord-${e(`${key}`)}`]: {
+                borderColor: `${value.dark.bg}`,
+              },
             },
           }
         }),
