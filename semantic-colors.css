@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* 
+  This file defines the semantic color utilities for Tailwind CSS v4.
+  It reads from the 'semanticColors' section of your theme configuration.
+*/
+
+@theme {
+
+    /* Utility classes for background and text colors */
+    @each color-name, color-config in theme('semanticColors') {
+        @utility #{color-name} {
+            background-color: theme('semanticColors.' + color-name + '.light.bg');
+            color: theme('semanticColors.' + color-name + '.light.txt');
+        }
+
+        @utility txt-#{color-name} {
+            color: theme('semanticColors.' + color-name + '.light.bg');
+        }
+
+        @utility block-#{color-name} {
+            background-color: theme('semanticColors.' + color-name + '.light.bg');
+        }
+
+        @utility bord-#{color-name} {
+            border-color: theme('semanticColors.' + color-name + '.light.bg');
+        }
+
+        /* Dark mode variants */
+        @starting-style dark: {
+            @utility #{color-name} {
+                background-color: theme('semanticColors.' + color-name + '.dark.bg');
+                color: theme('semanticColors.' + color-name + '.dark.txt');
+            }
+
+            @utility txt-#{color-name} {
+                color: theme('semanticColors.' + color-name + '.dark.bg');
+            }
+
+            @utility block-#{color-name} {
+                background-color: theme('semanticColors.' + color-name + '.dark.bg');
+            }
+
+            @utility bord-#{color-name} {
+                border-color: theme('semanticColors.' + color-name + '.dark.bg');
+            }
+        }
+    }
+
+    /* Default variant support */
+    @variant hover, focus, active, required, invalid, disabled, file, marker, selection, peer-checked, group-hover;
+}
