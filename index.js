@@ -35,6 +35,19 @@ const semanticColors = plugin(
                 borderColor: `${value.dark.bg}`,
               },
             },
+            [`.dark-${e(`${key}`)}`]: {
+              backgroundColor: `${value.dark.bg}`,
+              color: `${value.dark.txt}`,
+            },
+            [`.dark-txt-${e(`${key}`)}`]: {
+              color: `${value.dark.bg}`,
+            },
+            [`.dark-block-${e(`${key}`)}`]: {
+              backgroundColor: `${value.dark.bg}`,
+            },
+            [`.dark-bord-${e(`${key}`)}`]: {
+              borderColor: `${value.dark.bg}`,
+            },
           }
         }),
       ],
