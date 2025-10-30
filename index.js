@@ -1,51 +1,47 @@
-const plugin = require('tailwindcss/plugin')
+import plugin from 'tailwindcss/plugin'
 
-const semanticColors = plugin(
-  function ({ addUtilities, theme, variants, e }) {
-    const values = theme('semanticColors')
-    addUtilities(
-      [
-        Object.entries(values).map(([key, value]) => {
-          return {
-            [`.${e(`${key}`)}`]: {
-              backgroundColor: `${value.light.bg}`,
-              color: `${value.light.txt}`,
-            },
-            [`.txt-${e(`${key}`)}`]: {
-              color: `${value.light.bg}`,
-            },
-            [`.block-${e(`${key}`)}`]: {
-              backgroundColor: `${value.light.bg}`,
-            },
-            [`.bord-${e(`${key}`)}`]: {
-              borderColor: `${value.light.bg}`,
-            },
-            '.dark': {
-              [`& .${e(`${key}`)}`]: {
-                backgroundColor: `${value.dark.bg}`,
-                color: `${value.dark.txt}`,
-              },
-              [`& .txt-${e(`${key}`)}`]: {
-                color: `${value.dark.bg}`,
-              },
-              [`& .block-${e(`${key}`)}`]: {
-                backgroundColor: `${value.dark.bg}`,
-              },
-              [`& .bord-${e(`${key}`)}`]: {
-                borderColor: `${value.dark.bg}`,
-              },
-            },
-          }
-        }),
-      ],
-      variants('semanticColors')
-    )
-  },
-  {
-    variants: {
-      semanticColors: ['hover', 'dark', 'responsive', 'active', 'focus', 'required', 'invalid', 'disabled', 'file', 'marker', 'selection'],
-    },
-  }
-)
+export default plugin(function ({ addUtilities, theme, e, variants }) {
+    const semanticColors = theme('semanticColors', {})
+    const utilities = {}
 
-module.exports = semanticColors
+    // Generate utilities for each semantic color
+    Object.entries(semanticColors).forEach(([colorName, colorConfig]) => {
+        // Main utility (background + text)
+        utilities[`.${e(colorName)}`] = {
+            'background-color': colorConfig.light.bg,
+            'color': colorConfig.light.txt,
+            '@media (prefers-color-scheme: dark)': {
+                'background-color': colorConfig.dark.bg,
+                'color': colorConfig.dark.txt
+            }
+        }
+
+        // Text only utility
+        utilities[`.${e(`txt-${colorName}`)}`] = {
+            'color': colorConfig.light.bg,
+            '@media (prefers-color-scheme: dark)': {
+                'color': colorConfig.dark.bg
+            }
+        }
+
+        // Background only utility
+        utilities[`.${e(`block-${colorName}`)}`] = {
+            'background-color': colorConfig.light.bg,
+            '@media (prefers-color-scheme: dark)': {
+                'background-color': colorConfig.dark.bg
+            }
+        }
+
+        // Border utility
+        utilities[`.${e(`bord-${colorName}`)}`] = {
+            'border-color': colorConfig.light.bg,
+            '@media (prefers-color-scheme: dark)': {
+                'border-color': colorConfig.dark.bg
+            }
+        }
+    })
+
+    addUtilities(utilities, {
+        variants: ['responsive', 'hover', 'focus', 'active', 'disabled']
+    })
+})

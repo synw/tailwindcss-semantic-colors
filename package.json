@@ -1,22 +1,40 @@
 {
   "name": "tailwindcss-semantic-colors",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "A Tailwindcss plugin to generate semantic color utilities",
   "main": "index.js",
-  "repository": "https://github.com/synw/tailwindcss-semantic-colors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synw/tailwindcss-semantic-colors.git"
+  },
   "author": "synw",
   "license": "MIT",
-  "devDependencies": {
-    "tailwindcss": ">=3.0.0"
+  "peerDependencies": {
+    "tailwindcss": ">=4.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "tailwindcss": "^4.0.0"
   },
   "files": [
-    "/index.js"
+    "index.js"
   ],
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
-    "tailwindcss"
-  ]
+    "tailwindcss",
+    "plugin",
+    "semantic-colors",
+    "dark-mode"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/synw/tailwindcss-semantic-colors/issues"
+  },
+  "homepage": "https://github.com/synw/tailwindcss-semantic-colors#readme"
 }
