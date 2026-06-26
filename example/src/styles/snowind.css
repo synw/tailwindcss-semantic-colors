@@ -1,0 +1,42 @@
+.btn {
+    border-width: 1px;
+    border-radius: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    border-color: transparent;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+}
+
+.slide-x {
+    overflow-x: hidden;
+    transition-property: width;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.slide-y {
+    overflow-y: hidden;
+    transition-property: max-height;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.slidedown {
+    max-height: 1000px;
+}
+
+.slideup {
+    max-height: 0;
+}
