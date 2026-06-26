@@ -1,7 +1,8 @@
 import { useStorage } from '@vueuse/core';
 
-const store = useStorage<{ theme: string }>('store', {
-    theme: "bluestar"
+const store = useStorage<{ theme: string, darkMode: boolean }>('store', {
+    theme: "bluestar",
+    darkMode: false,
 });
 
 function initState() {
@@ -18,6 +19,16 @@ function setTheme(t?: string) {
     th?.classList.add("theme-" + store.value.theme);
 }
 
+function toggleDarkMode() {
+    const th = document.getElementsByTagName("html")[0];
+    if (store.value.darkMode) {
+        th?.classList.remove("dark");
+    } else {
+        th?.classList.add("dark");
+    }
+    store.value.darkMode = !store.value.darkMode;
+}
+
 export {
-    initState, setTheme, store
+    initState, setTheme, toggleDarkMode, store
 };

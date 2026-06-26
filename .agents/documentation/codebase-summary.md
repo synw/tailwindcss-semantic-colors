@@ -7,6 +7,7 @@ CSS-only Tailwind CSS v4 plugin providing semantic color utility classes with au
 - External: `tailwindcss >= 4.0.0` (peer dependency — required for `@theme`/`@utility` directives)
 
 ## Used By
+- `example/` — Vue demo app showcasing plugin capabilities with style guide and theme switcher
 - Any project using Tailwind CSS v4+ that needs semantic color utilities with dark mode
 
 ## Entry Point
@@ -25,6 +26,7 @@ CSS-only Tailwind CSS v4 plugin providing semantic color utility classes with au
 - **Utility pattern**: Each of 17 utilities applies both `background-color` and `color` properties using the theme tokens
 
 ## Related
+- `example/` — Vue + Vite demo app with style guide, theme switcher, and component examples
 - Tailwind CSS v4 documentation — https://tailwindcss.com/docs
 
 ## Documentation
@@ -33,4 +35,6 @@ CSS-only Tailwind CSS v4 plugin providing semantic color utility classes with au
 | Decision tree | `.agents/documentation/decision-tree.md` |
 | Project overview | `.agents/documentation/project-overview.md` |
 | Navigation map | `.agents/documentation/project-nav.md` |
+| Codebase summary | `.agents/documentation/codebase-summary.md` |
+| Example app summary | `example/.agents/documentation/codebase-summary.md` |
 | Full README | `README.md` |

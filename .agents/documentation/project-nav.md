@@ -49,6 +49,21 @@ tailwindcss-semantic-colors/style.css
 - Neutral: `--color-light`, `--color-l1`, `--color-semilight`, `--color-l2`, `--color-lighter`, `--color-l3`, `--color-superlight`, `--color-l4`
 - Semantic: `--color-success`, `--color-warning`, `--color-danger`, `--color-info`
 
+### example/ — Demo Application
+
+Vue + Vite app demonstrating the plugin in a real application context.
+
+- **Components**: `StyleGuide.vue` (color palette showcase), `ThemeSwitcher.vue` (variant selector)
+- **Themes**: Multiple SCSS variants (`default.scss`, `bluestar.scss`, `brown.scss`, `black.scss`) overriding CSS custom properties
+- **Usage**: Local reference via `file:../` — no npm publish needed for development
+
+**Key files**:
+| File | Purpose |
+|------|---------|
+| `src/styles/global.css` | Imports tailwindcss + semantic-colors + snowind theme |
+| `src/scss/main.scss` | SCSS entry point, includes all theme variants |
+| `package.json` | Dependencies — Vue 3, Vite 8, local plugin reference |
+
 ---
 
 ## 5. Code Snippets
@@ -107,6 +122,7 @@ tailwindcss-semantic-colors/style.css
 | Modify dark mode colors | `style.css` → `@layer base .dark {}` section |
 | Create custom theme | SCSS file overriding CSS variables (see README.md) |
 | Update package version | Edit `package.json` |
+| Run demo app | `example/` — `npm run dev` |
 
 ---
 
@@ -116,8 +132,10 @@ tailwindcss-semantic-colors/style.css
 |----------|------|
 | Decision tree | `.agents/documentation/decision-tree.md` |
 | Codebase summary | `.agents/documentation/codebase-summary.md` |
+| Example app summary | `example/.agents/documentation/codebase-summary.md` |
 | Project overview | `.agents/documentation/project-overview.md` |
 | Full README | `README.md` |
+| Example README | `example/README.md` |
 | NPM package | https://www.npmjs.com/package/tailwindcss-semantic-colors |
 
 ---
