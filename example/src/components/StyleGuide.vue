@@ -161,7 +161,7 @@
                             <div class="text-semilight font-medium mb-1">semilight / l2</div>
                             <div class="text-xs text-semilight opacity-75">Secondary content on light backgrounds</div>
                         </div>
-                        <div class="p-3 bg-light rounded border bord-lighter rounded">
+                        <div class="p-3 bg-light border bord-lighter rounded">
                             <div class="text-background font-medium mb-1">background (on dark)</div>
                             <div class="text-xs text-background opacity-75">Text on darker surfaces</div>
                         </div>
