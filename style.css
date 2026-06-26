@@ -1,170 +1,155 @@
 @theme {
-    --color-primary: var(--primary-light-bg);
-    --color-on-primary: var(--primary-light-txt);
-    --color-secondary: var(--secondary-light-bg);
-    --color-on-secondary: var(--secondary-light-txt);
+    --color-prim: var(--prim-light-bg);
+    --color-on-prim: var(--prim-light-txt);
+    --color-sec: var(--sec-light-bg);
+    --color-on-sec: var(--sec-light-txt);
+    --color-ter: var(--ter-light-bg);
+    --color-on-ter: var(--ter-light-txt);
     --color-background: var(--background-light-bg);
     --color-on-background: var(--background-light-txt);
-    --color-foreground: var(--foreground-light-bg);
-    --color-on-foreground: var(--foreground-light-txt);
     --color-light: var(--light-light-bg);
     --color-on-light: var(--light-light-txt);
     --color-lighter: var(--lighter-light-bg);
     --color-on-lighter: var(--lighter-light-txt);
     --color-semilight: var(--semilight-light-bg);
     --color-on-semilight: var(--semilight-light-txt);
+    --color-superlight: var(--superlight-light-bg);
+    --color-on-superlight: var(--superlight-light-txt);
     --color-success: var(--success-light-bg);
     --color-on-success: var(--success-light-txt);
     --color-warning: var(--warning-light-bg);
     --color-on-warning: var(--warning-light-txt);
     --color-danger: var(--danger-light-bg);
     --color-on-danger: var(--danger-light-txt);
+    --color-info: var(--info-light-bg);
+    --color-on-info: var(--info-light-txt);
+    /* aliases */
+    --color-l1: var(--light-light-bg);
+    --color-on-l1: var(--light-light-txt);
+    --color-l2: var(--semilight-light-bg);
+    --color-on-l2: var(--semilight-light-txt);
+    --color-l3: var(--lighter-light-bg);
+    --color-on-l3: var(--lighter-light-txt);
+    --color-l4: var(--superlight-light-bg);
+    --color-on-l4: var(--superlight-light-txt);
 }
 
 @layer base {
 
     .dark,
     [data-theme="dark"] {
-        --color-primary: var(--primary-dark-bg);
-        --color-on-primary: var(--primary-dark-txt);
-        --color-secondary: var(--secondary-dark-bg);
-        --color-on-secondary: var(--secondary-dark-txt);
+        --color-prim: var(--prim-dark-bg);
+        --color-on-prim: var(--prim-dark-txt);
+        --color-sec: var(--sec-dark-bg);
+        --color-on-sec: var(--sec-dark-txt);
+        --color-ter: var(--ter-dark-bg);
+        --color-on-ter: var(--ter-dark-txt);
         --color-background: var(--background-dark-bg);
         --color-on-background: var(--background-dark-txt);
-        --color-foreground: var(--foreground-dark-bg);
-        --color-on-foreground: var(--foreground-dark-txt);
         --color-light: var(--light-dark-bg);
         --color-on-light: var(--light-dark-txt);
         --color-lighter: var(--lighter-dark-bg);
         --color-on-lighter: var(--lighter-dark-txt);
         --color-semilight: var(--semilight-dark-bg);
         --color-on-semilight: var(--semilight-dark-txt);
+        --color-superlight: var(--superlight-dark-bg);
+        --color-on-superlight: var(--superlight-dark-txt);
         --color-success: var(--success-dark-bg);
         --color-on-success: var(--success-dark-txt);
         --color-warning: var(--warning-dark-bg);
         --color-on-warning: var(--warning-dark-txt);
         --color-danger: var(--danger-dark-bg);
         --color-on-danger: var(--danger-dark-txt);
+        --color-info: var(--info-dark-bg);
+        --color-on-info: var(--info-dark-txt);
+        /* aliases */
+        --color-l1: var(--light-dark-bg);
+        --color-on-l1: var(--light-dark-txt);
+        --color-l2: var(--semilight-dark-bg);
+        --color-on-l2: var(--semilight-dark-txt);
+        --color-l3: var(--lighter-dark-bg);
+        --color-on-l3: var(--lighter-dark-txt);
+        --color-l4: var(--superlight-dark-bg);
+        --color-on-l4: var(--superlight-dark-txt);
     }
 }
 
-/* Primary */
-.primary {
-    background-color: var(--primary-light-bg);
-    color: var(--primary-light-txt);
+@utility prim {
+    background-color: var(--color-prim);
+    color: var(--color-on-prim);
 }
 
-.dark .primary {
-    background-color: var(--primary-dark-bg);
-    color: var(--primary-dark-txt);
+@utility sec {
+    background-color: var(--color-sec);
+    color: var(--color-on-sec);
 }
 
-/* Secondary */
-.secondary {
-    background-color: var(--secondary-light-bg);
-    color: var(--secondary-light-txt);
+@utility ter {
+    background-color: var(--color-ter);
+    color: var(--color-on-ter);
 }
 
-.dark .secondary {
-    background-color: var(--secondary-dark-bg);
-    color: var(--secondary-dark-txt);
+@utility background {
+    background-color: var(--color-background);
+    color: var(--color-on-background);
 }
 
-/* Background */
-.background {
-    background-color: var(--background-light-bg);
-    color: var(--background-light-txt);
+@utility light {
+    background-color: var(--color-light);
+    color: var(--color-on-light);
 }
 
-.dark .background {
-    background-color: var(--background-dark-bg);
-    color: var(--background-dark-txt);
+@utility l1 {
+    background-color: var(--color-light);
+    color: var(--color-on-light);
 }
 
-/* Foreground */
-.foreground {
-    background-color: var(--foreground-light-bg);
-    color: var(--foreground-light-txt);
+@utility semilight {
+    background-color: var(--color-semilight);
+    color: var(--color-on-semilight);
 }
 
-.dark .foreground {
-    background-color: var(--foreground-dark-bg);
-    color: var(--foreground-dark-txt);
+@utility l2 {
+    background-color: var(--color-semilight);
+    color: var(--color-on-semilight);
 }
 
-/* Light */
-.light {
-    background-color: var(--light-light-bg);
-    color: var(--light-light-txt);
+@utility lighter {
+    background-color: var(--color-lighter);
+    color: var(--color-on-lighter);
 }
 
-.dark .light {
-    background-color: var(--light-dark-bg);
-    color: var(--light-dark-txt);
+@utility l3 {
+    background-color: var(--color-lighter);
+    color: var(--color-on-lighter);
 }
 
-/* Lighter */
-.lighter {
-    background-color: var(--lighter-light-bg);
-    color: var(--lighter-light-txt);
+@utility superlight {
+    background-color: var(--color-superlight);
+    color: var(--color-on-superlight);
 }
 
-.dark .lighter {
-    background-color: var(--lighter-dark-bg);
-    color: var(--lighter-dark-txt);
+@utility l4 {
+    background-color: var(--color-superlight);
+    color: var(--color-on-superlight);
 }
 
-/* Semi-light */
-.semilight {
-    background-color: var(--semilight-light-bg);
-    color: var(--semilight-light-txt);
+@utility success {
+    background-color: var(--color-success);
+    color: var(--color-on-success);
 }
 
-.dark .semilight {
-    background-color: var(--semilight-dark-bg);
-    color: var(--semilight-dark-txt);
+@utility warning {
+    background-color: var(--color-warning);
+    color: var(--color-on-warning);
 }
 
-/* Secondary-strong */
-.secondary-strong {
-    background-color: var(--secondary-strong-light-bg);
-    color: var(--secondary-strong-light-txt);
+@utility danger {
+    background-color: var(--color-danger);
+    color: var(--color-on-danger);
 }
 
-.dark .secondary-strong {
-    background-color: var(--secondary-strong-dark-bg);
-    color: var(--secondary-strong-dark-txt);
-}
-
-/* Success */
-.success {
-    background-color: var(--success-light-bg);
-    color: var(--success-light-txt);
-}
-
-.dark .success {
-    background-color: var(--success-dark-bg);
-    color: var(--success-dark-txt);
-}
-
-/* Warning */
-.warning {
-    background-color: var(--warning-light-bg);
-    color: var(--warning-light-txt);
-}
-
-.dark .warning {
-    background-color: var(--warning-dark-bg);
-    color: var(--warning-dark-txt);
-}
-
-/* Danger */
-.danger {
-    background-color: var(--danger-light-bg);
-    color: var(--danger-light-txt);
-}
-
-.dark .danger {
-    background-color: var(--danger-dark-bg);
-    color: var(--danger-dark-txt);
+@utility info {
+    background-color: var(--color-info);
+    color: var(--color-on-info);
 }
