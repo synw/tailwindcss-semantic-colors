@@ -4,6 +4,23 @@
 
 A Tailwind css plugin to generate semantic color utilities with dark mode support
 
+## Colors
+
+### Brand/main colors
+
+- `prim`: primary color
+- `sec`: secondary color
+- `ter`: tertiary color
+- `background`: base background
+
+### Semantic colors
+
+Classic `success`, `warning`, `danger`, `info`
+
+### Neutral colors
+
+Nuances of grey: `light`, `semilight`, `lighter`, `superlight`
+
 ## Install
 
 ```bash
@@ -23,51 +40,55 @@ Define your default semantic colors in a `scss/default.scss` file:
 
 ```scss
 :root {
-    --primary-light-bg: #0e7490;
-    --primary-light-txt: white;
-    --secondary-light-bg: #06b6d4;
-    --secondary-light-txt: white;
+    --prim-light-bg: #0e7490;
+    --prim-light-txt: white;
+    --sec-light-bg: #06b6d4;
+    --sec-light-txt: white;
+    --ter-light-bg: #4cdaf3;
+    --ter-light-txt: white;
     --success-light-bg: #16a34a;
     --success-light-txt: white;
     --warning-light-bg: #f59e0b;
     --warning-light-txt: white;
     --danger-light-bg: #ef4444;
     --danger-light-txt: white;
+    --info-light-bg: #4758ef;
+    --info-light-txt: white;
+    --background-light-bg: white;
+    --background-light-txt: #1f2937;
     --light-light-bg: #6b7280;
     --light-light-txt: white;
     --lighter-light-bg: #e2e8f0;
     --lighter-light-txt: #1f2937;
     --semilight-light-bg: #94a3b8;
     --semilight-light-txt: #1f2937;
-    --background-light-bg: white;
-    --background-light-txt: #1f2937;
-    --foreground-light-bg: white;
-    --foreground-light-txt: #1f2937;
-    --secondary-strong-light-bg: #06b6d4;
-    --secondary-strong-light-txt: white;
+    --superlight-light-bg: #d7dbe0;
+    --superlight-light-txt: #1f2937;
     // dark theme
-    --primary-dark-bg: #0a0a0a;
-    --primary-dark-txt: #f5f5f5;
-    --secondary-dark-bg: #475569;
-    --secondary-dark-txt: #f5f5f5;
+    --prim-dark-bg: #0a0a0a;
+    --prim-dark-txt: #f5f5f5;
+    --sec-dark-bg: #475569;
+    --sec-dark-txt: #f5f5f5;
+    --ter-dark-bg: #8f959d;
+    --ter-dark-txt: #f5f5f5;
     --success-dark-bg: #16a34a;
     --success-dark-txt: #f5f5f5;
     --warning-dark-bg: #f59e0b;
     --warning-dark-txt: white;
     --danger-dark-bg: #ef4444;
     --danger-dark-txt: #f5f5f5;
+    --info-dark-bg: #0b0b13;
+    --info-dark-txt: #f5f5f5;
     --light-dark-bg: #9ca3af;
     --light-dark-txt: #1f2937;
     --lighter-dark-bg: #525252;
     --lighter-dark-txt: white;
     --semilight-dark-bg: #525252;
     --semilight-dark-txt: white;
+    --superlight-dark-bg: #1d1c1c;
+    --superlight-dark-txt: white;
     --background-dark-bg: #272822;
     --background-dark-txt: #d4d4d4;
-    --foreground-dark-bg: black;
-    --foreground-dark-txt: #d4d4d4;
-    --secondary-strong-dark-bg: #475569;
-    --secondary-strong-dark-txt: #f5f5f5;
 }
 ```
 
@@ -77,10 +98,10 @@ Create a `scss/blue.scss` file to override some default variables:
 
 ```scss
 .theme-blue {
-    --primary-light-bg: #0e599a;
-    --primary-light-txt: white;
-    --secondary-light-bg: #dbecfe;
-    --secondary-light-txt: #0e599a;
+    --prim-light-bg: #0e599a;
+    --prim-light-txt: white;
+    --sec-light-bg: #dbecfe;
+    --sec-light-txt: #0e599a;
     --success-light-bg: #01DA97;
     --warning-light-bg: #FAC165;
     --danger-light-bg: #FE606C;
@@ -99,7 +120,21 @@ Create a `scss/main.scss` file:
 @use "./blue.scss" as *;
 ```
 
-Use `import "../scss/main.scss"` in your application.
+Import `main.scss"` in your application. Vitejs:
+
+```js
+<style lang="scss">
+@use "./scss/main.scss";
+</style>
+```
+
+Astro:
+
+```js
+import "../scss/main.scss";
+```
+
+## Usage
 
 Enable your theme in the html:
 
@@ -113,14 +148,12 @@ To switch to dark mode:
 <html class="dark theme-blue">
 ```
 
-## Usage
-
 ### Background and text utilities
 
 All the color utilities generated support the dark mode. Example: writing:
 
 ```html
-<div class="primary">Primary block</div>
+<div class="prim">Primary block</div>
 ```
 
 will do the same as:
@@ -132,7 +165,7 @@ will do the same as:
 ### Background only utilities
 
 ```html
-<div class="bg-primary">Primary background block</div>
+<div class="bg-prim">Primary background block</div>
 ```
 
 will do the same as:
@@ -144,7 +177,7 @@ will do the same as:
 ### Text only utilities
 
 ```html
-<div class="text-primary">Primary text block</div>
+<div class="text-prim">Primary text block</div>
 ```
 
 will do the same as:
@@ -156,7 +189,7 @@ will do the same as:
 ### Border utilities
 
 ```html
-<div class="border border-primary">Block with border</div>
+<div class="border border-prim">Block with border</div>
 ```
 
 will do the same as:
@@ -170,7 +203,7 @@ will do the same as:
 Example of the `hover` variant:
 
 ```html
-<div class="primary hover:warning">Primary hover block</div>
+<div class="prim hover:warning">Primary hover block</div>
 ```
 
 will do the same as:
