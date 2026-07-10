@@ -22,7 +22,7 @@
 | Technical summary (entry points, key files) | `.agents/documentation/codebase-summary.md` |
 | Add a new semantic color | Edit `style.css` — add `@theme` token + `@utility` rule |
 | Modify dark mode colors | Edit `@layer base .dark {}` block in `style.css` |
-| Create a theme variant | Create SCSS file overriding CSS variables (see README.md) |
+| Create a theme variant (SCSS) | See `.agents/documentation/project-nav.md` → "How to Add a SCSS Theme" |
 | Update package version | Edit `package.json` |
 
 ## Conventions

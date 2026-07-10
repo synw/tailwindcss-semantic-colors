@@ -16,14 +16,14 @@ CSS-only Tailwind CSS v4 plugin providing semantic color utility classes with au
 ## Key Files
 | File | Purpose |
 |------|---------|
-| `style.css` | Core source — contains `@theme` tokens, dark mode overrides (`@layer base .dark {}`), and 17 `@utility` definitions for semantic colors |
+| `style.css` | Core source — contains `@theme` tokens, dark mode overrides (`@layer base .dark {}`), and 16 `@utility` definitions for semantic colors |
 | `package.json` | NPM manifest — CSS-only distribution with `./style.css` as export |
 | `README.md` | Installation, configuration, and usage documentation |
 
 ## Architecture
 - **Token-based theming**: All colors are defined as CSS custom properties in `@theme {}` (e.g., `--color-prim`, `--color-on-prim`)
 - **Dark mode isolation**: Dark variants wrapped in `@layer base .dark {}` to ensure proper cascade ordering
-- **Utility pattern**: Each of 17 utilities applies both `background-color` and `color` properties using the theme tokens
+- **Utility pattern**: Each of 16 utilities applies both `background-color` and `color` properties using the theme tokens
 
 ## Related
 - `example/` — Vue + Vite demo app with style guide, theme switcher, and component examples

@@ -82,6 +82,22 @@ A lightweight, zero-dependency Tailwind CSS v4+ plugin that provides semantic co
 @import "tailwindcss-semantic-colors";
 ```
 
+### Creating a SCSS Theme (Minimal)
+
+```scss
+.theme-mytheme {
+    --prim-light-bg: #0e599a;
+    --prim-light-txt: white;
+    --background-light-bg: #eff7ff;
+}
+```
+
+**Full guide**: See `.agents/documentation/project-nav.md` → "How to Add a SCSS Theme" for complete step-by-step instructions including:
+- Creating the SCSS file with `.theme-{name}` class
+- Registering in `src/scss/main.scss`
+- Activating in HTML
+- Registering theme name in `src/conf.ts`
+
 ---
 
 ## Documentation Links

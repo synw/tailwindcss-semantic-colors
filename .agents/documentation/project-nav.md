@@ -17,9 +17,9 @@
 | Principle | Detail | Key Files |
 |-----------|--------|-----------|
 | CSS-only plugin | No JavaScript; all code in single `style.css` using native Tailwind v4 directives | `style.css` |
-| Token-based theming | Colors as CSS custom properties in `@theme {}`, consumed by utilities via `var()` | `style.css` (lines 1-50) |
-| Dark mode via layers | Dark variants in `@layer base .dark {}` for proper cascade priority | `style.css` (lines 28-75) |
-| Utility pairing | Each utility applies both background and text color simultaneously | `style.css` (lines 78-140) |
+| Token-based theming | Colors as CSS custom properties in `@theme {}`, consumed by utilities via `var()` | `style.css` (lines 1-35) |
+| Dark mode via layers | Dark variants in `@layer base .dark {}` for proper cascade priority | `style.css` (lines 37-76) |
+| Utility pairing | Each utility applies both background and text color simultaneously | `style.css` (lines 77-154) |
 
 ---
 
@@ -39,9 +39,9 @@ tailwindcss-semantic-colors/style.css
 
 ### style.css — Core Plugin Source
 
-- **Lines 1-50**: `@theme {}` block — defines all semantic color tokens (background + text pairs)
-- **Lines 28-75**: `@layer base .dark {}` — dark mode overrides for all color tokens
-- **Lines 78-140**: 17 `@utility` definitions — `.prim`, `.sec`, `.ter`, `.background`, `.light`, `.l1`, `.semilight`, `.l2`, `.lighter`, `.l3`, `.superlight`, `.l4`, `.success`, `.warning`, `.danger`, `.info`
+- **Lines 1-35**: `@theme {}` block — defines all semantic color tokens (background + text pairs)
+- **Lines 37-76**: `@layer base .dark {}` — dark mode overrides for all color tokens (`.dark` and `[data-theme="dark"]`)
+- **Lines 77-154**: 16 `@utility` definitions — `.prim`, `.sec`, `.ter`, `.background`, `.light`, `.l1`, `.semilight`, `.l2`, `.lighter`, `.l3`, `.superlight`, `.l4`, `.success`, `.warning`, `.danger`, `.info`
 
 **Key tokens**:
 - Brand: `--color-prim`, `--color-on-prim`, `--color-sec`, `--color-on-sec`, `--color-ter`, `--color-on-ter`
@@ -101,13 +101,139 @@ Vue + Vite app demonstrating the plugin in a real application context.
 
 ### Create Theme Variant (SCSS)
 
+Create a new SCSS theme file in `example/src/scss/` following this pattern:
+
 ```scss
 .theme-custom {
+    /* Light mode overrides (only override what you need) */
     --prim-light-bg: #0e599a;
     --prim-light-txt: white;
     --background-light-bg: #eff7ff;
+    --background-light-txt: #1f2937;
 }
 ```
+
+**See detailed guide below** → [How to Add a SCSS Theme](#how-to-add-a-scss-theme)
+
+### How to Add a SCSS Theme — Complete Guide
+
+#### Overview
+
+Themes are SCSS files that override CSS custom properties defined by the plugin. Each theme is activated via a CSS class on the `<html>` element (e.g., `.theme-blue`). Themes can override any subset of the 24 color variables (12 light + 12 dark).
+
+#### Step 1: Create the Theme File
+
+Create a new file in `src/scss/` named after your theme (e.g., `src/scss/mytheme.scss`):
+
+```scss
+.theme-mytheme {
+    /* ===== Light Mode Overrides ===== */
+    /* Brand colors */
+    --prim-light-bg: #0e599a;    /* Primary background */
+    --prim-light-txt: white;      /* Primary text */
+    --sec-light-bg: #06b6d4;      /* Secondary background */
+    --sec-light-txt: white;       /* Secondary text */
+    --ter-light-bg: #4cdaf3;      /* Tertiary background */
+    --ter-light-txt: white;       /* Tertiary text */
+
+    /* Semantic colors */
+    --success-light-bg: #16a34a;
+    --success-light-txt: white;
+    --warning-light-bg: #f59e0b;
+    --warning-light-txt: white;
+    --danger-light-bg: #ef4444;
+    --danger-light-txt: white;
+    --info-light-bg: #4758ef;
+    --info-light-txt: white;
+
+    /* Background & neutral colors */
+    --background-light-bg: #eff7ff;
+    --background-light-txt: #1f2937;
+    --light-light-bg: #6b7280;
+    --light-light-txt: white;
+    --lighter-light-bg: #dbecfe;
+    --lighter-light-txt: #0e599a;
+    --semilight-light-bg: #94a3b8;
+    --semilight-light-txt: #1f2937;
+    --superlight-light-bg: #d7dbe0;
+    --superlight-light-txt: #1f2937;
+
+    /* ===== Dark Mode Overrides (optional) ===== */
+    /* Only include if you want different dark mode colors */
+    --prim-dark-bg: #1e3a5f;
+    --prim-dark-txt: #f5f5f5;
+    --background-dark-bg: #0f172a;
+    --background-dark-txt: #d4d4d4;
+}
+```
+
+#### Step 2: Register the Theme
+
+Add your theme to `src/scss/main.scss`:
+
+```scss
+@use "./default.scss" as *;
+@use "./bluestar.scss" as *;
+@use "./black.scss" as *;
+@use "./mytheme.scss" as *;  /* Add your new theme */
+```
+
+#### Step 3: Activate the Theme in HTML
+
+Add the theme class to your `<html>` element:
+
+```html
+<html class="theme-mytheme">
+```
+
+For dark mode:
+
+```html
+<html class="dark theme-mytheme">
+```
+
+#### Step 4: Register the Theme in conf.ts
+
+Add your theme name to the themes array in `src/conf.ts` so it appears in the ThemeSwitcher UI:
+
+```ts
+const themes = new Array<string>(
+    "default",
+    "bluestar",
+    "black",
+    "navy",
+    "forest",
+    "slate",
+    "royal",
+    "teal",
+    // Add your new theme here
+    "mytheme",  // <-- Add your theme name (matches .theme-mytheme class)
+);
+
+export {
+    themes,
+}
+```
+
+**Note**: The theme name in `conf.ts` must match the suffix of your SCSS class (e.g., `.theme-mytheme` → `"mytheme"`).
+
+#### Variable Reference
+
+| Variable | Purpose | Example Value |
+|----------|---------|---------------|
+| `--{color}-light-bg` | Light mode background color | `#0e599a` |
+| `--{color}-light-txt` | Light mode text color | `white` |
+| `--{color}-dark-bg` | Dark mode background color | `#1e3a5f` |
+| `--{color}-dark-txt` | Dark mode text color | `#f5f5f5` |
+
+**Available colors**: `prim`, `sec`, `ter`, `success`, `warning`, `danger`, `info`, `background`, `light`, `lighter`, `semilight`, `superlight`
+
+#### Best Practices
+
+- **Override only what you need**: You don't need to define all 24 variables. Unspecified variables fall back to defaults from `default.scss`
+- **Ensure contrast**: Text color should have sufficient contrast against its background (WCAG AA minimum 4.5:1)
+- **Name your class**: Use `.theme-{name}` format (e.g., `.theme-corporate`, `.theme-vibrant`)
+- **Keep it minimal**: Only override variables that differ from defaults
 
 ---
 
