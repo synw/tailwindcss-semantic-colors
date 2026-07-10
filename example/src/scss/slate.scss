@@ -1,0 +1,75 @@
+.theme-slate {
+    // Primary brand color - sophisticated charcoal
+    --prim-light-bg: #2d3748;
+    --prim-light-txt: white;
+
+    // Secondary - cool blue-gray
+    --sec-light-bg: #4a5568;
+    --sec-light-txt: white;
+
+    // Tertiary - steel blue accent
+    --ter-light-bg: #718096;
+    --ter-light-txt: #2d3748;
+
+    // Success state
+    --success-light-bg: #2f855a;
+    --success-light-txt: white;
+
+    // Warning state
+    --warning-light-bg: #b7791f;
+    --warning-light-txt: white;
+
+    // Danger/error state
+    --danger-light-bg: #c53030;
+    --danger-light-txt: white;
+
+    // Info state
+    --info-light-bg: #4299e1;
+    --info-light-txt: white;
+
+    // Page background
+    --background-light-bg: #f7fafc;
+    --background-light-txt: #1a202c;
+
+    // Light neutral (borders, inactive states)
+    --light-light-bg: #718096;
+    --light-light-txt: white;
+
+    // Lighter neutral (cards, elevated surfaces)
+    --lighter-light-bg: #e2e8f0;
+    --lighter-light-txt: #1a202c;
+
+    // Semi-light neutral
+    --semilight-light-bg: #a0aec0;
+    --semilight-light-txt: #f7fafc;
+
+    // Super light neutral (hover states)
+    --superlight-light-bg: #edf2f7;
+    --superlight-light-txt: #1a202c;
+
+    // Dark theme overrides
+    --prim-dark-bg: #2d3748;
+    --prim-dark-txt: #f7fafc;
+    --sec-dark-bg: #4a5568;
+    --sec-dark-txt: #f7fafc;
+    --ter-dark-bg: #718096;
+    --ter-dark-txt: #2d3748;
+    --success-dark-bg: #48bb78;
+    --success-dark-txt: #1a202c;
+    --warning-dark-bg: #ecc94b;
+    --warning-dark-txt: #1a202c;
+    --danger-dark-bg: #f56565;
+    --danger-dark-txt: #f7fafc;
+    --info-dark-bg: #63b3ed;
+    --info-dark-txt: #1a202c;
+    --background-dark-bg: #1a202c;
+    --background-dark-txt: #e2e8f0;
+    --light-dark-bg: #4a5568;
+    --light-dark-txt: #f7fafc;
+    --lighter-dark-bg: #2d3748;
+    --lighter-dark-txt: #e2e8f0;
+    --semilight-dark-bg: #4a5568;
+    --semilight-dark-txt: #cbd5e0;
+    --superlight-dark-bg: #2d3748;
+    --superlight-dark-txt: #a0aec0;
+}

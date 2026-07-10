@@ -1,0 +1,75 @@
+.theme-royal {
+    // Primary brand color - deep purple
+    --prim-light-bg: #5b21b6;
+    --prim-light-txt: white;
+
+    // Secondary - lavender accent
+    --sec-light-bg: #8b5cf6;
+    --sec-light-txt: white;
+
+    // Tertiary - soft violet
+    --ter-light-bg: #c4b5fd;
+    --ter-light-txt: #5b21b6;
+
+    // Success state
+    --success-light-bg: #16a34a;
+    --success-light-txt: white;
+
+    // Warning state
+    --warning-light-bg: #d97706;
+    --warning-light-txt: white;
+
+    // Danger/error state
+    --danger-light-bg: #dc2626;
+    --danger-light-txt: white;
+
+    // Info state
+    --info-light-bg: #3b82f6;
+    --info-light-txt: white;
+
+    // Page background
+    --background-light-bg: #faf5ff;
+    --background-light-txt: #1e1b4b;
+
+    // Light neutral (borders, inactive states)
+    --light-light-bg: #7c3aed;
+    --light-light-txt: white;
+
+    // Lighter neutral (cards, elevated surfaces)
+    --lighter-light-bg: #ede9fe;
+    --lighter-light-txt: #1e1b4b;
+
+    // Semi-light neutral
+    --semilight-light-bg: #a78bfa;
+    --semilight-light-txt: #faf5ff;
+
+    // Super light neutral (hover states)
+    --superlight-light-bg: #f5f3ff;
+    --superlight-light-txt: #1e1b4b;
+
+    // Dark theme overrides
+    --prim-dark-bg: #5b21b6;
+    --prim-dark-txt: #faf5ff;
+    --sec-dark-bg: #7c3aed;
+    --sec-dark-txt: #faf5ff;
+    --ter-dark-bg: #c4b5fd;
+    --ter-dark-txt: #5b21b6;
+    --success-dark-bg: #22c55e;
+    --success-dark-txt: #052e16;
+    --warning-dark-bg: #f59e0b;
+    --warning-dark-txt: #052e16;
+    --danger-dark-bg: #ef4444;
+    --danger-dark-txt: #faf5ff;
+    --info-dark-bg: #60a5fa;
+    --info-dark-txt: #1e1b4b;
+    --background-dark-bg: #1e1b4b;
+    --background-dark-txt: #e9d5ff;
+    --light-dark-bg: #6d28d9;
+    --light-dark-txt: #faf5ff;
+    --lighter-dark-bg: #2e1065;
+    --lighter-dark-txt: #ddd6fe;
+    --semilight-dark-bg: #4c1d95;
+    --semilight-dark-txt: #c4b5fd;
+    --superlight-dark-bg: #2e1065;
+    --superlight-dark-txt: #a78bfa;
+}

@@ -1,0 +1,75 @@
+.theme-teal {
+    // Primary brand color - modern teal
+    --prim-light-bg: #0d9488;
+    --prim-light-txt: white;
+
+    // Secondary - warm coral accent
+    --sec-light-bg: #f97316;
+    --sec-light-txt: white;
+
+    // Tertiary - soft mint
+    --ter-light-bg: #5eead4;
+    --ter-light-txt: #0d9488;
+
+    // Success state
+    --success-light-bg: #16a34a;
+    --success-light-txt: white;
+
+    // Warning state
+    --warning-light-bg: #eab308;
+    --warning-light-txt: #0f172a;
+
+    // Danger/error state
+    --danger-light-bg: #dc2626;
+    --danger-light-txt: white;
+
+    // Info state
+    --info-light-bg: #0891b2;
+    --info-light-txt: white;
+
+    // Page background
+    --background-light-bg: #f0fdfa;
+    --background-light-txt: #134e4a;
+
+    // Light neutral (borders, inactive states)
+    --light-light-bg: #475569;
+    --light-light-txt: white;
+
+    // Lighter neutral (cards, elevated surfaces)
+    --lighter-light-bg: #ccfbf1;
+    --lighter-light-txt: #134e4a;
+
+    // Semi-light neutral
+    --semilight-light-bg: #99f6e4;
+    --semilight-light-txt: #0d9488;
+
+    // Super light neutral (hover states)
+    --superlight-light-bg: #f0fdfa;
+    --superlight-light-txt: #134e4a;
+
+    // Dark theme overrides
+    --prim-dark-bg: #0d9488;
+    --prim-dark-txt: #f0fdfa;
+    --sec-dark-bg: #f97316;
+    --sec-dark-txt: #042f2e;
+    --ter-dark-bg: #5eead4;
+    --ter-dark-txt: #0d9488;
+    --success-dark-bg: #22c55e;
+    --success-dark-txt: #052e16;
+    --warning-dark-bg: #fbbf24;
+    --warning-dark-txt: #042f2e;
+    --danger-dark-bg: #ef4444;
+    --danger-dark-txt: #f0fdfa;
+    --info-dark-bg: #22d3ee;
+    --info-dark-txt: #042f2e;
+    --background-dark-bg: #042f2e;
+    --background-dark-txt: #ccfbf1;
+    --light-dark-bg: #14b8a6;
+    --light-dark-txt: #042f2e;
+    --lighter-dark-bg: #134e4a;
+    --lighter-dark-txt: #99f6e4;
+    --semilight-dark-bg: #0f766e;
+    --semilight-dark-txt: #5eead4;
+    --superlight-dark-bg: #134e4a;
+    --superlight-dark-txt: #475569;
+}

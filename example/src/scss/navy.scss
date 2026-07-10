@@ -1,0 +1,75 @@
+.theme-navy {
+    // Primary brand color - classic navy blue
+    --prim-light-bg: #0f4c81;
+    --prim-light-txt: white;
+
+    // Secondary - lighter navy for accents
+    --sec-light-bg: #3b7dd8;
+    --sec-light-txt: white;
+
+    // Tertiary - sky blue accent
+    --ter-light-bg: #7ab3e0;
+    --ter-light-txt: #0f4c81;
+
+    // Success state
+    --success-light-bg: #16a34a;
+    --success-light-txt: white;
+
+    // Warning state
+    --warning-light-bg: #d97706;
+    --warning-light-txt: white;
+
+    // Danger/error state
+    --danger-light-bg: #dc2626;
+    --danger-light-txt: white;
+
+    // Info state
+    --info-light-bg: #2563eb;
+    --info-light-txt: white;
+
+    // Page background
+    --background-light-bg: #f8fafc;
+    --background-light-txt: #1e293b;
+
+    // Light neutral (borders, inactive states)
+    --light-light-bg: #64748b;
+    --light-light-txt: white;
+
+    // Lighter neutral (cards, elevated surfaces)
+    --lighter-light-bg: #e2e8f0;
+    --lighter-light-txt: #1e293b;
+
+    // Semi-light neutral
+    --semilight-light-bg: #94a3b8;
+    --semilight-light-txt: #f8fafc;
+
+    // Super light neutral (hover states)
+    --superlight-light-bg: #f1f5f9;
+    --superlight-light-txt: #1e293b;
+
+    // Dark theme overrides
+    --prim-dark-bg: #0f4c81;
+    --prim-dark-txt: #f8fafc;
+    --sec-dark-bg: #3b7dd8;
+    --sec-dark-txt: #f8fafc;
+    --ter-dark-bg: #7ab3e0;
+    --ter-dark-txt: #0f4c81;
+    --success-dark-bg: #22c55e;
+    --success-dark-txt: #0f172a;
+    --warning-dark-bg: #f59e0b;
+    --warning-dark-txt: #0f172a;
+    --danger-dark-bg: #ef4444;
+    --danger-dark-txt: #f8fafc;
+    --info-dark-bg: #3b82f6;
+    --info-dark-txt: #f8fafc;
+    --background-dark-bg: #0f172a;
+    --background-dark-txt: #e2e8f0;
+    --light-dark-bg: #475569;
+    --light-dark-txt: #f8fafc;
+    --lighter-dark-bg: #1e293b;
+    --lighter-dark-txt: #e2e8f0;
+    --semilight-dark-bg: #334155;
+    --semilight-dark-txt: #cbd5e1;
+    --superlight-dark-bg: #1e293b;
+    --superlight-dark-txt: #94a3b8;
+}
