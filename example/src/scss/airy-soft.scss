@@ -1,0 +1,29 @@
+.theme-airy-soft {
+    /* ===== Light Mode Overrides ===== */
+    /* Brand colors (Pastel tones) */
+    --prim-light-bg: #dbeafe;    /* Soft Blue 100 */
+    --prim-light-txt: #1e40af;    /* Deep enough for contrast but still blue-toned */
+    --sec-light-bg: #dcfce7;      /* Soft Green 100 */
+    --sec-light-txt: #166534;      /* Deep enough for contrast but still green-toned */
+    --ter-light-bg: #fef9c3;      /* Soft Yellow 100 */
+    --ter-light-txt: #854d0e;      /* Deep enough for contrast but still yellow-toned */
+
+    /* Background & neutral colors (All light/soft) */
+    --background-light-bg: #ffffff; 
+    --background-light-txt: #374151; /* Soft Slate 700 */
+    --light-light-bg: #f8fafc;
+    --light-light-txt: #64748b;
+    --lighter-light-bg: #f1f5f9;
+    --lighter-light-txt: #94a3b8;
+    --semilight-light-bg: #f8fafc;
+    --semilight-light-txt: #475569;
+    --superlight-light-bg: #ffffff;
+    --superlight-light-txt: #94a3b8;
+
+    /* ===== Dark Mode Overrides (Keeping it light/airy) ===== */
+    /* Even in "dark" mode, we use soft, non-black tones as requested */
+    --prim-dark-bg: #bfdbfe;      /* Slightly darker blue 200 */
+    --prim-dark-txt: #1e40af;
+    --background-dark-bg: #f1f5f9; /* Light slate background even in dark mode */
+    --background-dark-txt: #334155;
+}

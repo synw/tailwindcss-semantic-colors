@@ -1,6 +1,5 @@
 const themes = new Array<string>(
     "default",
-    "bluestar",
     "black",
     "navy",
     "forest",
@@ -9,10 +8,10 @@ const themes = new Array<string>(
     "teal",
     // Neutral/Soft Corporate Themes
     "pearl",
-    "ash",
     "sandstone",
     "cloud",
     "graphite",
+    "airy-soft"
 );
 
 export {
