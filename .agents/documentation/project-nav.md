@@ -54,15 +54,19 @@ tailwindcss-semantic-colors/style.css
 Vue + Vite app demonstrating the plugin in a real application context.
 
 - **Components**: `StyleGuide.vue` (color palette showcase), `ThemeSwitcher.vue` (variant selector)
-- **Themes**: Multiple SCSS variants (`default.scss`, `bluestar.scss`, `brown.scss`, `black.scss`) overriding CSS custom properties
+- **State**: `state.ts` — Theme/dark mode state management via VueUse `useStorage`
+- **Themes**: 12 SCSS variants (`default`, `black`, `navy`, `forest`, `slate`, `royal`, `teal`, `pearl`, `sandstone`, `cloud`, `graphite`, `airy-soft`) overriding CSS custom properties
 - **Usage**: Local reference via `file:../` — no npm publish needed for development
 
 **Key files**:
 | File | Purpose |
 |------|---------|
 | `src/styles/global.css` | Imports tailwindcss + semantic-colors + snowind theme |
-| `src/scss/main.scss` | SCSS entry point, includes all theme variants |
-| `package.json` | Dependencies — Vue 3, Vite 8, local plugin reference |
+| `src/styles/snowind.css` | UI component styles — button and slide transition utilities |
+| `src/scss/main.scss` | SCSS entry point, imports all 12 theme variants |
+| `src/conf.ts` | Themes configuration — lists all available theme names for ThemeSwitcher UI |
+| `src/state.ts` | Theme/dark mode state management using VueUse `useStorage` |
+| `package.json` | Dependencies — Vue 3.5+, Vite 8, @tailwindcss/vite ^4.3, sass-embedded, local plugin |
 
 ---
 
@@ -173,8 +177,17 @@ Add your theme to `src/scss/main.scss`:
 
 ```scss
 @use "./default.scss" as *;
-@use "./bluestar.scss" as *;
 @use "./black.scss" as *;
+@use "./navy.scss" as *;
+@use "./forest.scss" as *;
+@use "./slate.scss" as *;
+@use "./royal.scss" as *;
+@use "./teal.scss" as *;
+@use "./pearl.scss" as *;
+@use "./sandstone.scss" as *;
+@use "./cloud.scss" as *;
+@use "./graphite.scss" as *;
+@use "./airy-soft.scss" as *;
 @use "./mytheme.scss" as *;  /* Add your new theme */
 ```
 
@@ -199,13 +212,18 @@ Add your theme name to the themes array in `src/conf.ts` so it appears in the Th
 ```ts
 const themes = new Array<string>(
     "default",
-    "bluestar",
     "black",
     "navy",
     "forest",
     "slate",
     "royal",
     "teal",
+    // Neutral/Soft Corporate Themes
+    "pearl",
+    "sandstone",
+    "cloud",
+    "graphite",
+    "airy-soft",
     // Add your new theme here
     "mytheme",  // <-- Add your theme name (matches .theme-mytheme class)
 );
@@ -246,9 +264,11 @@ export {
 | Technical summary (entry points, key files) | `.agents/documentation/codebase-summary.md` |
 | Add a new semantic color | `style.css` — add `@theme` token + `@utility` block |
 | Modify dark mode colors | `style.css` → `@layer base .dark {}` section |
-| Create custom theme | SCSS file overriding CSS variables (see README.md) |
+| Create custom theme | SCSS file overriding CSS variables (see "How to Add a SCSS Theme") |
 | Update package version | Edit `package.json` |
 | Run demo app | `example/` — `npm run dev` |
+| Manage theme variants | `example/src/scss/` — add SCSS file + register in `main.scss` and `conf.ts` |
+| Deploy demo to GitHub Pages | `.github/workflows/static.yml` — deploys `example/dist` |
 
 ---
 
@@ -275,3 +295,5 @@ export {
 | Color variable naming | `{color}-{mode}-{property}` pattern: `--{color}-light-bg`, `--{color}-dark-txt` |
 | Dark mode selectors | `.dark` and `[data-theme="dark"]` in `@layer base {}` |
 | Utility pairing | Each utility sets both `background-color` and `color` properties |
+| Theme variant system | SCSS files in `example/src/scss/` override CSS variables via `.theme-{name}` class; registered in `main.scss` and `conf.ts` |
+| Alias utilities | `l1`→`light`, `l2`→`semilight`, `l3`→`lighter`, `l4`→`superlight` — identical output |

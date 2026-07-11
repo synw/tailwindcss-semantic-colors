@@ -86,7 +86,93 @@
         </div>
 
         <!-- ============================================================ -->
-        <!-- SECTION 2: BACKGROUND & NEUTRAL GREYS                        -->
+        <!-- SECTION 2: SEMANTIC COLORS                                   -->
+        <!-- ============================================================ -->
+        <div class="mb-12">
+            <div class="text-2xl font-bold mb-2 border-b border-lighter pb-2">Semantic Colors</div>
+            <div class="text-sm mb-6">Status and feedback colors with automatic dark mode support</div>
+
+            <!-- Semantic Color Palette -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div class="success p-6 rounded-lg text-center shadow-sm">
+                    <div class="text-lg font-semibold mb-1">success</div>
+                    <div class="text-xs opacity-75">Positive / completed</div>
+                </div>
+                <div class="warning p-6 rounded-lg text-center shadow-sm">
+                    <div class="text-lg font-semibold mb-1">warning</div>
+                    <div class="text-xs opacity-75">Caution / attention</div>
+                </div>
+                <div class="danger p-6 rounded-lg text-center shadow-sm">
+                    <div class="text-lg font-semibold mb-1">danger</div>
+                    <div class="text-xs opacity-75">Error / destructive</div>
+                </div>
+                <div class="info p-6 rounded-lg text-center shadow-sm">
+                    <div class="text-lg font-semibold mb-1">info</div>
+                    <div class="text-xs opacity-75">Information / help</div>
+                </div>
+            </div>
+
+            <!-- Semantic Usage Patterns -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Text Only -->
+                <div class="border border-light rounded-lg p-4">
+                    <div class="text-sm font-semibold mb-3">Text Only</div>
+                    <div class="space-y-2">
+                        <div class="text-success">Success message</div>
+                        <div class="text-warning">Warning message</div>
+                        <div class="text-danger">Danger message</div>
+                        <div class="text-info">Info message</div>
+                    </div>
+                </div>
+
+                <!-- Background Only -->
+                <div class="border border-light rounded-lg p-4">
+                    <div class="text-sm font-semibold mb-3">Background Only</div>
+                    <div class="space-y-2">
+                        <div class="bg-success p-2 rounded mb-1">Success background</div>
+                        <div class="bg-warning p-2 rounded mb-1">Warning background</div>
+                        <div class="bg-danger p-2 rounded mb-1">Danger background</div>
+                        <div class="bg-info p-2 rounded mb-1">Info background</div>
+                    </div>
+                </div>
+
+                <!-- Text & Background -->
+                <div class="border border-light rounded-lg p-4">
+                    <div class="text-sm font-semibold mb-3">Text + Background</div>
+                    <div class="space-y-2">
+                        <div class="success p-2 rounded mb-1">Success combined</div>
+                        <div class="warning p-2 rounded mb-1">Warning combined</div>
+                        <div class="danger p-2 rounded mb-1">Danger combined</div>
+                        <div class="info p-2 rounded mb-1">Info combined</div>
+                    </div>
+                </div>
+
+                <!-- Borders -->
+                <div class="border border-light rounded-lg p-4">
+                    <div class="text-sm font-semibold mb-3">Borders</div>
+                    <div class="space-y-2">
+                        <div class="border border-success p-2 rounded mb-1">Success border</div>
+                        <div class="border border-warning p-2 rounded mb-1">Warning border</div>
+                        <div class="border border-danger p-2 rounded mb-1">Danger border</div>
+                        <div class="border border-info p-2 rounded mb-1">Info border</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semantic Buttons -->
+            <div class="mt-6">
+                <div class="text-sm font-semibold mb-3">Buttons</div>
+                <div class="flex flex-wrap gap-3">
+                    <button class="success btn px-4 py-2 rounded">Success</button>
+                    <button class="warning btn px-4 py-2 rounded">Warning</button>
+                    <button class="danger btn px-4 py-2 rounded">Danger</button>
+                    <button class="info btn px-4 py-2 rounded">Info</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SECTION 3: BACKGROUND & NEUTRAL GREYS                        -->
         <!-- ============================================================ -->
         <div class="mb-12">
             <div class="text-2xl font-bold mb-2 border-b border-lighter pb-2">Background & Neutral Greys</div>
@@ -177,92 +263,6 @@
                     <div><code class="text-prim">l2</code> = semilight</div>
                     <div><code class="text-prim">l3</code> = lighter</div>
                     <div><code class="text-prim">l4</code> = superlight</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ============================================================ -->
-        <!-- SECTION 3: SEMANTIC COLORS                                   -->
-        <!-- ============================================================ -->
-        <div class="mb-12">
-            <div class="text-2xl font-bold mb-2 border-b border-lighter pb-2">Semantic Colors</div>
-            <div class="text-sm mb-6">Status and feedback colors with automatic dark mode support</div>
-
-            <!-- Semantic Color Palette -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                <div class="success p-6 rounded-lg text-center shadow-sm">
-                    <div class="text-lg font-semibold mb-1">success</div>
-                    <div class="text-xs opacity-75">Positive / completed</div>
-                </div>
-                <div class="warning p-6 rounded-lg text-center shadow-sm">
-                    <div class="text-lg font-semibold mb-1">warning</div>
-                    <div class="text-xs opacity-75">Caution / attention</div>
-                </div>
-                <div class="danger p-6 rounded-lg text-center shadow-sm">
-                    <div class="text-lg font-semibold mb-1">danger</div>
-                    <div class="text-xs opacity-75">Error / destructive</div>
-                </div>
-                <div class="info p-6 rounded-lg text-center shadow-sm">
-                    <div class="text-lg font-semibold mb-1">info</div>
-                    <div class="text-xs opacity-75">Information / help</div>
-                </div>
-            </div>
-
-            <!-- Semantic Usage Patterns -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Text Only -->
-                <div class="border border-light rounded-lg p-4">
-                    <div class="text-sm font-semibold mb-3">Text Only</div>
-                    <div class="space-y-2">
-                        <div class="text-success">Success message</div>
-                        <div class="text-warning">Warning message</div>
-                        <div class="text-danger">Danger message</div>
-                        <div class="text-info">Info message</div>
-                    </div>
-                </div>
-
-                <!-- Background Only -->
-                <div class="border border-light rounded-lg p-4">
-                    <div class="text-sm font-semibold mb-3">Background Only</div>
-                    <div class="space-y-2">
-                        <div class="bg-success p-2 rounded mb-1">Success background</div>
-                        <div class="bg-warning p-2 rounded mb-1">Warning background</div>
-                        <div class="bg-danger p-2 rounded mb-1">Danger background</div>
-                        <div class="bg-info p-2 rounded mb-1">Info background</div>
-                    </div>
-                </div>
-
-                <!-- Text & Background -->
-                <div class="border border-light rounded-lg p-4">
-                    <div class="text-sm font-semibold mb-3">Text + Background</div>
-                    <div class="space-y-2">
-                        <div class="success p-2 rounded mb-1">Success combined</div>
-                        <div class="warning p-2 rounded mb-1">Warning combined</div>
-                        <div class="danger p-2 rounded mb-1">Danger combined</div>
-                        <div class="info p-2 rounded mb-1">Info combined</div>
-                    </div>
-                </div>
-
-                <!-- Borders -->
-                <div class="border border-light rounded-lg p-4">
-                    <div class="text-sm font-semibold mb-3">Borders</div>
-                    <div class="space-y-2">
-                        <div class="border border-success p-2 rounded mb-1">Success border</div>
-                        <div class="border border-warning p-2 rounded mb-1">Warning border</div>
-                        <div class="border border-danger p-2 rounded mb-1">Danger border</div>
-                        <div class="border border-info p-2 rounded mb-1">Info border</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Semantic Buttons -->
-            <div class="mt-6">
-                <div class="text-sm font-semibold mb-3">Buttons</div>
-                <div class="flex flex-wrap gap-3">
-                    <button class="success btn px-4 py-2 rounded">Success</button>
-                    <button class="warning btn px-4 py-2 rounded">Warning</button>
-                    <button class="danger btn px-4 py-2 rounded">Danger</button>
-                    <button class="info btn px-4 py-2 rounded">Info</button>
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@
 
 [![pub package](https://img.shields.io/npm/v/tailwindcss-semantic-colors)](https://www.npmjs.com/package/tailwindcss-semantic-colors)
 
-A CSS-only Tailwind CSS v4 plugin providing semantic color utilities with automatic dark mode support. Part of the [Agent Smith toolkit](https://github.com/lynxai-team/agent-smith).
+A CSS-only Tailwind CSS v4 plugin providing semantic color utilities with automatic dark mode support.
 
 ## Features
 
@@ -19,16 +19,19 @@ A CSS-only Tailwind CSS v4 plugin providing semantic color utilities with automa
 
 | Doc | Description |
 |-----|-------------|
+| [Decision Tree](.agents/documentation/decision-tree.md) | Quick guide to find the right documentation for your task |
 | [Codebase Summary](.agents/documentation/codebase-summary.md) | Architecture, key files, and patterns for the `tailwindcss-semantic-colors` package |
 | [Project Overview](.agents/documentation/project-overview.md) | High-level project context and mission |
 | [Project Navigation](.agents/documentation/project-nav.md) | Detailed navigation map with dependency graph |
+| [Example App Summary](example/.agents/documentation/codebase-summary.md) | Technical documentation for the Vue demo application |
 
 ### For Humans
 
 | Doc | Description |
 |-----|-------------|
+| [Styleguide Demo](https://synw.github.io/tailwindcss-semantic-colors/) | Interactive visual demo — explore all themes and color utilities |
 | [Example App](example/) | Vue + Vite demo app showcasing all features, themes, and components |
-| [GitHub Repository](https://github.com/lynxai-team/agent-smith) | Source code and issues |
+| [GitHub Repository](https://github.com/synw/tailwindcss-semantic-colors) | Source code and issues |
 
 ## Installation
 
@@ -350,7 +353,7 @@ For example:
 
 - [Example App](example/) — Full Vue demo with style guide, theme switcher, and 12+ color themes
 - [Codebase Summary](.agents/documentation/codebase-summary.md) — Technical documentation for developers
-- [GitHub Repository](https://github.com/lynxai-team/agent-smith) — Source code, issues, and contributions
+- [GitHub Repository](https://github.com/synw/tailwindcss-semantic-colors) — Source code, issues, and contributions
 
 ## License
 
